@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import pandas as pd
 import zipfile
 import os, sys
-sys.path.append(os.getcwd())
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 
 from Logger import logging
 from Exception import CustomizeExcep
@@ -69,15 +69,14 @@ class file_ext:
 
             logging.error("An error occurred during file type dispatch.", exc_info = True)
 
-            raise CustomizeExcep(e)
+            raise CustomizeExcep(e, sys)
         
-
 """
 if __name__ == '__main__': # The main function, I have no idea why but looks like if this is the main function it will strat
             
     file_path = "/home/amine/Desktop/Projects/Real_Estatet_endtoend/data/archive.zip"
 
-    file_exten = os.path.splitext(file_path)[1] # without [1], ('/home/amine/Desktop/Projects/Real_Estatet_endtoend/data/archive', '.zip') split text into path and extension
+    file_exten = '.wer' #os.path.splitext(file_path)[1] # without [1], ('/home/amine/Desktop/Projects/Real_Estatet_endtoend/data/archive', '.zip') split text into path and extension
 
     obj = file_ext.ext(file_extenstion=file_exten) # it will gave u the object if its correct so this is that will be used for returning data frame
 

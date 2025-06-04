@@ -27,4 +27,4 @@ class CustomizeExcep(Exception):
         self.error_message = Error_message(error_message, error_detail= error_detail)
     
     def __str__(self):
-        return super().__str__()
+        return self.error_message
