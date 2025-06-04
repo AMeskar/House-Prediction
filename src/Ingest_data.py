@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 import pandas as pd
 import zipfile
 import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
+sys.path.append(os.getcwd())
 
-from logger import logging
+from Logger import logging
 from Exception import CustomizeExcep
 
 # First of all an abstract class with the biseline function
@@ -57,10 +57,20 @@ class file_ext:
     def ext(file_extenstion: str) -> ingest :
 
         # If the file extension meet the criteria it will directed to the extracton file class
+        try:
 
-        if file_extenstion  == '.zip': return extract_file()
+            if file_extenstion  == '.zip': return extract_file()
 
-        else: raise CustomizeExcep(ValueError("Extension is different than the zip"))
+            else: 
+
+                raise ValueError('Unsupported file type. Only .zip files are allowed.')
+        
+        except Exception as e:
+
+            logging.error("An error occurred during file type dispatch.", exc_info = True)
+
+            raise CustomizeExcep(e)
+        
 
 """
 if __name__ == '__main__': # The main function, I have no idea why but looks like if this is the main function it will strat
