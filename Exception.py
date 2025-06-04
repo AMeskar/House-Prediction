@@ -1,6 +1,8 @@
-import sys 
+import sys, os
 
-from logger import logging
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
+
+from Logger import logging
 
 def Error_message(error, error_detail: sys): 
     

@@ -1,7 +1,11 @@
 from abc import ABC, abstractmethod
 import pandas as pd
 import zipfile
-import os
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
+
+from logger import logging
+from Exception import CustomizeExcep
 
 # First of all an abstract class with the biseline function
 
@@ -56,9 +60,9 @@ class file_ext:
 
         if file_extenstion  == '.zip': return extract_file()
 
-        else: raise ValueError("Extension is different than the zip")
+        else: raise CustomizeExcep(ValueError("Extension is different than the zip"))
 
-
+"""
 if __name__ == '__main__': # The main function, I have no idea why but looks like if this is the main function it will strat
             
     file_path = "/home/amine/Desktop/Projects/Real_Estatet_endtoend/data/archive.zip"
@@ -73,3 +77,4 @@ if __name__ == '__main__': # The main function, I have no idea why but looks lik
 
     pass
 
+"""
