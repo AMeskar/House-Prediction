@@ -4,6 +4,7 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 
 from Steps.Ingestion import Ingest_step
+from Steps.Handling_MV_step import missing_value
 
 @pipeline(
 
@@ -13,6 +14,8 @@ from Steps.Ingestion import Ingest_step
 )
 def ml_pipeline(file_path: str):
 
-    df = Ingest_step(file_path="/Users/meskara/Desktop/Github/Real_Estatet_endtoend/data/archive.zip")
+    df = Ingest_step(file_path= file_path)
+
+    df_imputed = missing_value(df, 'Iterative')
 
     return df

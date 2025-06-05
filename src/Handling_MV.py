@@ -289,7 +289,7 @@ class switch_btw_methods:
         """
         
         return self._stratgey.apply(Df)
-
+"""
 if __name__=='__main__':
     
     df = pd.read_csv("/Users/meskara/Desktop/Github/Real_Estatet_endtoend/src/extracted_data/AmesHousing.csv") 
@@ -303,3 +303,4 @@ if __name__=='__main__':
     #strategy.apply_strategy(df) 
 
     print(df)
+"""
