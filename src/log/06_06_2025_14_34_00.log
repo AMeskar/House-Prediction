@@ -1,0 +1,5 @@
+[2025-06-06 14:34:00,592] 75 root - INFO - Executing outlier detection strategy.
+[2025-06-06 14:34:00,592] 38 root - INFO - Detectiong Outliers using standard scaling with a threshold of 3
+[2025-06-06 14:34:00,597] 44 root - INFO - Outlier is detected
+[2025-06-06 14:34:00,597] 75 root - INFO - Executing outlier detection strategy.
+[2025-06-06 14:34:00,597] 38 root - INFO - Detectiong Outliers using standard scaling with a threshold of 3

@@ -1,0 +1,7 @@
+[2025-06-05 21:36:58,694] 35 root - INFO - Scaling features ['SalePrice', 'Gr Liv Area'] using log scale to remove skewness or minimize it
+[2025-06-05 21:36:58,697] 43 root - INFO - Logarithmic Scaling is now Complete
+[2025-06-05 21:36:58,697] 85 root - INFO - Min Max Scaler is setting up for ['SalePrice', 'Gr Liv Area']
+[2025-06-05 21:36:58,701] 88 root - INFO - Scaling is now completed
+[2025-06-05 21:36:58,701] 62 root - INFO - Standard Scaling is setting up for ['SalePrice', 'Gr Liv Area']
+[2025-06-05 21:36:58,703] 65 root - INFO - Standard Scaling is Completed
+[2025-06-05 21:36:58,703] 108 root - INFO - Apply One hot encoding fro our categorical data ['Neighborhood']

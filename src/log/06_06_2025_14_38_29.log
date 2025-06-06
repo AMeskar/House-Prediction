@@ -1,0 +1,10 @@
+[2025-06-06 14:38:29,075] 75 root - INFO - Executing outlier detection strategy.
+[2025-06-06 14:38:29,075] 38 root - INFO - Detectiong Outliers using standard scaling with a threshold of 3
+[2025-06-06 14:38:29,082] 44 root - INFO - Outlier is detected
+[2025-06-06 14:38:29,082] 75 root - INFO - Executing outlier detection strategy.
+[2025-06-06 14:38:29,082] 38 root - INFO - Detectiong Outliers using standard scaling with a threshold of 3
+[2025-06-06 14:38:29,085] 44 root - INFO - Outlier is detected
+[2025-06-06 14:38:29,085] 85 root - INFO - The dataframe will start removing outliers
+[2025-06-06 14:38:29,086] 89 root - INFO - Rmoving is completed
+[2025-06-06 14:38:29,086] 109 root - INFO - Visualizing outliers for features: ['SalePrice', 'Gr Liv Area']
+[2025-06-06 14:38:38,303] 117 root - INFO - Outlier visualization completed.

@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 
 from Steps.Ingestion import Ingest_step
 from Steps.Handling_MV_step import missing_value
+from Steps.feature_engineer_step import feature_eng 
 
 @pipeline(
 
@@ -12,10 +13,28 @@ from Steps.Handling_MV_step import missing_value
         name = 'PriceHouse_Predictor'
     ),
 )
-def ml_pipeline(file_path: str):
+def ml_pipeline():
 
-    df = Ingest_step(file_path= file_path)
+    """Define an end-to-end machine learning pipeline."""
 
-    df_imputed = missing_value(df, 'Iterative')
+    # Data Ingestion Step
+    raw_data = Ingest_step(
+        file_path="/Users/meskara/Desktop/Github/Real_Estatet_endtoend/data/archive.zip"
+    )
 
-    return df
+    # Handling Missing Values Step
+    filled_data = missing_value(raw_data, strategy = 'Single Imputation')
+
+    # Feature Engineering Step
+    engineered_data = feature_eng(
+        filled_data, strategy="log", features=["Gr Liv Area", "SalePrice"]
+    )
+
+    
+
+    return engineered_data
+"""
+if __name__ == "__main__":
+    # Running the pipeline
+    run = ml_pipeline()
+"""
