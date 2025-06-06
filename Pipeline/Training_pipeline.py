@@ -5,7 +5,8 @@ sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 
 from Steps.Ingestion import Ingest_step
 from Steps.Handling_MV_step import missing_value
-from Steps.feature_engineer_step import feature_eng 
+from Steps.feature_engineer_step import feature_eng
+from Steps.outlier_detection_step import outlier_values 
 
 @pipeline(
 
@@ -30,11 +31,13 @@ def ml_pipeline():
         filled_data, strategy="log", features=["Gr Liv Area", "SalePrice"]
     )
 
+    clean_data = outlier_values( engineered_data, column_name="SalePrice", method = 'remove', strategy = 'Zscore'
+    )
+
     
 
-    return engineered_data
-"""
+    return clean_data
+
 if __name__ == "__main__":
     # Running the pipeline
     run = ml_pipeline()
-"""

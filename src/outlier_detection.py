@@ -115,7 +115,8 @@ class OutlierDetector:
             plt.show()
 
         logging.info("Outlier visualization completed.")
-
+        
+"""
 if __name__ == "__main__":
 
     df = pd.read_csv("/Users/meskara/Desktop/Github/Real_Estatet_endtoend/src/extracted_data/AmesHousing.csv")
@@ -129,3 +130,4 @@ if __name__ == "__main__":
     print(df_cleaned.shape)
     outlier_detector.visualising_outliers(df_cleaned, features=["SalePrice", "Gr Liv Area"])
 
+"""
