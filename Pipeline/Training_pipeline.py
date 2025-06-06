@@ -7,6 +7,7 @@ from Steps.Ingestion import Ingest_step
 from Steps.Handling_MV_step import missing_value
 from Steps.feature_engineer_step import feature_eng
 from Steps.outlier_detection_step import outlier_values 
+from Steps.Data_split_step import split_data
 
 @pipeline(
 
@@ -31,12 +32,13 @@ def ml_pipeline():
         filled_data, strategy="log", features=["Gr Liv Area", "SalePrice"]
     )
 
-    clean_data = outlier_values( engineered_data, column_name="SalePrice", method = 'remove', strategy = 'Zscore'
+    clean_data = outlier_values(engineered_data, column_name="SalePrice", method = 'remove', strategy = 'Zscore'
     )
 
-    
+    x_train, x_test, y_train, y_test = split_data(clean_data, 'SalePrice')
 
-    return clean_data
+
+    return x_train, x_test, y_train, y_test
 
 if __name__ == "__main__":
     # Running the pipeline
