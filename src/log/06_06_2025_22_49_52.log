@@ -1,0 +1,6 @@
+[2025-06-06 22:49:52,493] 67 root - INFO - Splitting data using the selected strategy.
+[2025-06-06 22:49:52,493] 37 root - INFO - Starting the spliting of data
+[2025-06-06 22:49:52,500] 44 root - INFO - Spliting is now complete
+[2025-06-06 22:49:52,501] 155 root - INFO - Splitting data using the selected strategy.
+[2025-06-06 22:49:52,501] 38 root - INFO - Starting th model building
+[2025-06-06 22:49:52,501] 41 root - INFO - X train is empty

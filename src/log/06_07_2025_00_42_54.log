@@ -1,0 +1,9 @@
+[2025-06-07 00:42:54,806] 67 root - INFO - Splitting data using the selected strategy.
+[2025-06-07 00:42:54,806] 37 root - INFO - Starting the spliting of data
+[2025-06-07 00:42:54,815] 44 root - INFO - Spliting is now complete
+[2025-06-07 00:42:54,816] 149 root - INFO - Splitting data using the selected strategy.
+[2025-06-07 00:42:54,816] 38 root - INFO - Starting th model building
+[2025-06-07 00:42:54,816] 41 root - INFO - X train is empty
+[2025-06-07 00:42:54,816] 44 root - INFO - y train is empty
+[2025-06-07 00:42:54,816] 46 root - INFO - Creating the Pipeline
+[2025-06-07 00:42:54,816] 55 root - INFO - fitting the model

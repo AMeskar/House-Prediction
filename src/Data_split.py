@@ -45,7 +45,7 @@ class Spliting_dat(SplitData):
 
         return x_train, x_test, y_train, y_test
 
-class file_ext: 
+class Split: 
 
     def __init__(self, strategy: Spliting_dat):
         """

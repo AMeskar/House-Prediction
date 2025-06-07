@@ -40,6 +40,8 @@ def ml_pipeline():
 
     return x_train, x_test, y_train, y_test
 
+"""
 if __name__ == "__main__":
     # Running the pipeline
     run = ml_pipeline()
+"""
