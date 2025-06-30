@@ -66,15 +66,15 @@ class Split:
         """
         logging.info("Splitting data using the selected strategy.")
         return self._strategy.train_test(df, target_column)
-    
-"""       
+           
+"""
 if __name__ == '__main__': 
   
     df = pd.read_csv("/Users/meskara/Desktop/Github/Real_Estatet_endtoend/src/extracted_data/AmesHousing.csv") 
 
-    strategy = file_ext(Spliting_dat()) 
+    strategy = Split(Spliting_dat()) 
     
     x_train, x_test, y_train, y_test = strategy.split(df, 'SalePrice') 
         
-    print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
+    print(type(x_train), x_test.shape, y_train.shape, y_test.shape)
 """

@@ -12,7 +12,10 @@ from Steps.Data_split_step import split_data
 @pipeline(
 
     model = Model(
-        name = 'PriceHouse_Predictor'
+        name = 'PriceHouse_Predictor',
+        version = None,
+        license = 'Apache 2.0',
+        description = 'Real Estate model predictor'
     ),
 )
 def ml_pipeline():
