@@ -21,7 +21,7 @@ from Exception import CustomizeExcep
 #experiment_tracker = Client().active_stack.experiment_tracker
 
 model = Model(
-    name= 'Real Estate',
+    name= 'PriceHouse_Predictor',
     version = None,
     licence = 'Apache 2.0',
     description = 'Real Estate price model predictor'
@@ -52,8 +52,8 @@ def model_building(X_train: pd.DataFrame, y_train: pd.Series) -> Annotated[Pipel
     numerical_Transformer = IterativeImputer(initial_strategy='median')
     categorical_Transformer = Pipeline(
         steps=[
-            'Iterative Imputation', IterativeImputer(initial_strategy='most_frequent'),
-            'One Hot Encoding', OneHotEncoder(handle_unknown='ignore')
+            ('Iterative Imputation', IterativeImputer(initial_strategy='most_frequent')),
+            ('One Hot Encoding', OneHotEncoder(handle_unknown='ignore'))
         ]
     )
 
@@ -64,13 +64,13 @@ def model_building(X_train: pd.DataFrame, y_train: pd.Series) -> Annotated[Pipel
             ('categorical data', categorical_Transformer, categorical_data)
         ]
     )
-    pipeline = Pipeline(steps=[('Preprocessor', preprocessor), ('Model', LinearRegression())])
+    pipeline = Pipeline(steps=[('preprocessor', preprocessor), ('Model', LinearRegression())])
 
     if not mlflow.active_run():
         mlflow.start_run()
     
     try: 
-        mlflow.sklear.autolog()
+        mlflow.sklearn.autolog()
 
         logging.info('Building and Training the linear regression model')
         pipeline.fit(X_train, y_train)

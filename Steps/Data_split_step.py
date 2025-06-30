@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 
 from Logger import logging
 from Exception import CustomizeExcep
-from src.Data_split import file_ext, Spliting_dat
+from src.Data_split import Split, Spliting_dat
 
 @step 
 def split_data(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series] :
@@ -19,7 +19,7 @@ def split_data(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, pd.DataFram
 
         logging.info('Data is not a data frame')
 
-    strategy = file_ext(strategy = Spliting_dat())
+    strategy = Split(strategy = Spliting_dat())
 
     x_train, x_test, y_train, y_test = strategy.split(df, 'SalePrice')
 

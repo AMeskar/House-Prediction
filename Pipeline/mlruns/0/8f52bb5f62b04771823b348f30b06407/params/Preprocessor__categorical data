@@ -1,0 +1,3 @@
+Pipeline(steps=['Iterative Imputation',
+                IterativeImputer(initial_strategy='most_frequent'),
+                'One Hot Encoding', OneHotEncoder(handle_unknown='ignore')])

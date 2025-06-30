@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/ada31b43bbd24c7c9916801bac73053e/artifacts
+end_time: 1751298632655
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ada31b43bbd24c7c9916801bac73053e
+run_name: smiling-bug-187
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751298623387
+status: 3
+tags: []
+user_id: meskara

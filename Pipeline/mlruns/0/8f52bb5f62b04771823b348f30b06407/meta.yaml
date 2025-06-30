@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/8f52bb5f62b04771823b348f30b06407/artifacts
+end_time: 1751297865537
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8f52bb5f62b04771823b348f30b06407
+run_name: polite-crow-133
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751297859019
+status: 3
+tags: []
+user_id: meskara

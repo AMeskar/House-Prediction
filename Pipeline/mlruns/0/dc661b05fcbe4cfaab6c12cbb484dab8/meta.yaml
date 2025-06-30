@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/dc661b05fcbe4cfaab6c12cbb484dab8/artifacts
+end_time: 1751298543188
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dc661b05fcbe4cfaab6c12cbb484dab8
+run_name: trusting-frog-274
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751298532777
+status: 3
+tags: []
+user_id: meskara

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/1ba150bd86e440d2a3087ee0e2a81d42/artifacts
+end_time: 1751297800378
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1ba150bd86e440d2a3087ee0e2a81d42
+run_name: vaunted-vole-255
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751297800228
+status: 3
+tags: []
+user_id: meskara
