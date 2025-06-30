@@ -2,45 +2,19 @@ from abc import ABC, abstractmethod
 import pandas as pd
 import zipfile
 import os, sys
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.base import RegressorMixin
-from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
 
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 
 from Logger import logging
 from Exception import CustomizeExcep
 from src.Data_split import Split, Spliting_dat
+from src.Model_building import ModelBuilding, LinearRegressionStartegy
 
+class ModelEval(ABC):
 
-class ModelBuild(ABC):
-
-    def Model(self, X_train: pd.DataFrame, y_train: pd.Series):
-
-        """
-        
-        """
-
-        pass
-
-
-class LinearRegressionStartegy(ModelBuild):
-
-    def Model(self, X_train: pd.DataFrame, y_train: pd.Series):
-
-        """
-        
-        """
-
-        pass
-
-
-class XgBoostRegressorStartegy(ModelBuild):
-
-    def Model(self, X_train: pd.DataFrame, y_train: pd.Series):
+    def Model_Evaluation(self, model: RegressorMixin, X_test: pd.DataFrame, y_test: pd.Series):
 
         """
         
@@ -48,47 +22,59 @@ class XgBoostRegressorStartegy(ModelBuild):
 
         pass
     
-class RFRegressionStartegy(ModelBuild):
+class RFRegressionStartegy(ModelEval):
 
-    def Model(self, X_train: pd.DataFrame, y_train: pd.Series):
+    def Model_Evaluation(self, model: RegressorMixin, X_test: pd.DataFrame, y_test: pd.Series):
 
         """
         
         """
 
-        pass
+        logging.info('Model Evaluation start')
 
-class file_ext: 
+        y_pred = model.predict(X_test)
 
-    def __init__(self, strategy: ModelBuild):
+        r_square = r2_score(y_true= y_test, y_pred= y_pred)
+
+        mse = mean_squared_error(y_true= y_test, y_pred= y_pred)
+
+        metrics = {'Mean Square Error': mse, 'R Square Error': r_square}
+
+        logging.info(f'metrics = {metrics}')
+        logging.info('Evaluation is ended')
+
+        return metrics
+
+class ModelEvaluation: 
+
+    def __init__(self, strategy: ModelEval):
         """
         
         """
         self._strategy = strategy
 
-    def set_strategy(self, strategy: ModelBuild):
+    def set_strategy(self, strategy: ModelEval):
         """
         
         """
         logging.info("Switching data splitting strategy.")
         self._strategy = strategy
 
-    def fit_model(self, X_train: pd.DataFrame, y_train: pd.Series):
+    def Eval_model(self, model: RegressorMixin, X_test: pd.DataFrame, y_test: pd.Series):
         """
         
         """
-        logging.info("Splitting data using the selected strategy.")
-        return self._strategy.Model(X_train, y_train)
+        logging.info("Evaluating model using the selected strategy.")
+        return self._strategy.Model_Evaluation(model, X_test, y_test)
     
-"""        
-if __name__ == '__main__': 
+        
+"""if __name__ == '__main__': 
   
-    df = pd.read_csv("/Users/meskara/Desktop/Github/Real_Estatet_endtoend/src/extracted_data/AmesHousing.csv") 
+    model = ModelBuilding(LinearRegressionStartegy())
 
-    obj = Split(Spliting_dat()) 
-    
-    X_train, X_test, y_train, y_test = obj.split(df, 'SalePrice')
+    X_test = 
+    y_test =
 
-    strategy = file_ext(LinearRegressionStartegy()) 
-    
-    pipeline = strategy.fit_model(X_train, y_train) """
+    model_evaluate = ModelEvaluation(RFRegressionStartegy())
+    evaluation_metrics = model_evaluate.Eval_model(model, X_test, y_test)
+    print(evaluation) """

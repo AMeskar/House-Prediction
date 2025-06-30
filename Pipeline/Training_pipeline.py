@@ -9,6 +9,7 @@ from Steps.feature_engineer_step import feature_eng
 from Steps.outlier_detection_step import outlier_values 
 from Steps.Data_split_step import split_data
 from Steps.Model_building_step import model_building
+from Steps.Model_evaluation_step import model_evaluating
 
 @pipeline(
 
@@ -42,6 +43,10 @@ def ml_pipeline():
     x_train, x_test, y_train, y_test = split_data(clean_data, 'SalePrice')
 
     model = model_building(x_train, y_train)
+
+    R_squre, mse = model_evaluating(
+        trained_model= model, X_test= x_test, y_test= y_test
+    )
 
 
     return model

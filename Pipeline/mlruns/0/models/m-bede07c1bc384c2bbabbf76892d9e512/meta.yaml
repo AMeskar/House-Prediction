@@ -1,0 +1,10 @@
+artifact_location: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/models/m-bede07c1bc384c2bbabbf76892d9e512/artifacts
+creation_timestamp: 1751319754450
+experiment_id: '0'
+last_updated_timestamp: 1751319758785
+model_id: m-bede07c1bc384c2bbabbf76892d9e512
+model_type: null
+name: model
+source_run_id: 3359fa12fcf74e1992ac868c5d0917b8
+status: 2
+status_message: null

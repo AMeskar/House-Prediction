@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/23dde85b5960416a9adc5189f7189f99/artifacts
+end_time: 1751320448665
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 23dde85b5960416a9adc5189f7189f99
+run_name: fearless-penguin-222
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751320438863
+status: 3
+tags: []
+user_id: meskara

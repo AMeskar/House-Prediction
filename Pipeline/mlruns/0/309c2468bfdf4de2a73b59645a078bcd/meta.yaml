@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/309c2468bfdf4de2a73b59645a078bcd/artifacts
+end_time: 1751320366020
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 309c2468bfdf4de2a73b59645a078bcd
+run_name: stately-grub-323
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751320357122
+status: 3
+tags: []
+user_id: meskara

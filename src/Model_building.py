@@ -127,7 +127,7 @@ class RFRegressionStartegy(ModelBuild):
 
         return pipeline
 
-class file_ext: 
+class ModelBuilding: 
 
     def __init__(self, strategy: ModelBuild):
         """
@@ -148,8 +148,8 @@ class file_ext:
         """
         logging.info("Splitting data using the selected strategy.")
         return self._strategy.Model(X_train, y_train)
-"""        
-if __name__ == '__main__': 
+        
+"""if __name__ == '__main__': 
   
     df = pd.read_csv("/Users/meskara/Desktop/Github/Real_Estatet_endtoend/src/extracted_data/AmesHousing.csv") 
 
@@ -157,6 +157,7 @@ if __name__ == '__main__':
     
     X_train, X_test, y_train, y_test = obj.split(df, 'SalePrice')
 
-    strategy = file_ext(LinearRegressionStartegy()) 
+    strategy = ModelBuilding(LinearRegressionStartegy()) 
     
-    pipeline = strategy.fit_model(X_train, y_train) """
+    pipeline = strategy.fit_model(X_train, y_train) 
+"""

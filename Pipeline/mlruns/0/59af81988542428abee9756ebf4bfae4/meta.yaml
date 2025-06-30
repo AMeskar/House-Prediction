@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/Pipeline/mlruns/0/59af81988542428abee9756ebf4bfae4/artifacts
+end_time: 1751320195323
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 59af81988542428abee9756ebf4bfae4
+run_name: sneaky-shrimp-285
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751320185942
+status: 3
+tags: []
+user_id: meskara
