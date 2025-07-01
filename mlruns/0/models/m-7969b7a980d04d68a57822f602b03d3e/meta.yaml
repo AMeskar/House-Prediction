@@ -1,0 +1,10 @@
+artifact_location: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/mlruns/0/models/m-7969b7a980d04d68a57822f602b03d3e/artifacts
+creation_timestamp: 1751409972022
+experiment_id: '0'
+last_updated_timestamp: 1751409975976
+model_id: m-7969b7a980d04d68a57822f602b03d3e
+model_type: null
+name: model
+source_run_id: c5a063808fd44df7964afd1af7ace513
+status: 2
+status_message: null

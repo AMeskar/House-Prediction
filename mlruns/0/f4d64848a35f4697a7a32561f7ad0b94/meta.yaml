@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/mlruns/0/f4d64848a35f4697a7a32561f7ad0b94/artifacts
+end_time: 1751409781690
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f4d64848a35f4697a7a32561f7ad0b94
+run_name: auspicious-hog-120
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751409771741
+status: 3
+tags: []
+user_id: meskara

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/mlruns/0/6439fe04f43c47ee8130992ab44a1416/artifacts
+end_time: 1751407202471
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6439fe04f43c47ee8130992ab44a1416
+run_name: gentle-roo-30
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751407192278
+status: 3
+tags: []
+user_id: meskara

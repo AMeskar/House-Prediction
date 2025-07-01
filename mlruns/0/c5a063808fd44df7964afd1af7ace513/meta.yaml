@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/meskara/Desktop/Github/Real_Estatet_endtoend/mlruns/0/c5a063808fd44df7964afd1af7ace513/artifacts
+end_time: 1751409976058
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c5a063808fd44df7964afd1af7ace513
+run_name: nervous-foal-102
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751409965896
+status: 3
+tags: []
+user_id: meskara

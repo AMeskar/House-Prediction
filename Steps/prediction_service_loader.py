@@ -1,5 +1,5 @@
 from zenml import step
-from zenml.integrations.mlflow.model_deolyers import MLFlowModelDeployer
+from zenml.integrations.mlflow.model_deployers import MLFlowModelDeployer
 
 import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))

@@ -2,7 +2,7 @@ import os
 
 from Pipeline.Training_pipeline import ml_pipeline
 from Steps.Dynamic_importer import dynamic_importer
-from Steps.predicition_service_loader import prediction_service_loader
+from Steps.prediction_service_loader import prediction_service_loader
 
 from zenml import pipeline
 from zenml.integrations.mlflow.steps import mlflow_model_deployer_step
